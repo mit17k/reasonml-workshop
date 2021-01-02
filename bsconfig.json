@@ -1,0 +1,27 @@
+// This is the configuration file used by BuckleScript's build system bsb. Its documentation lives here: http://bucklescript.github.io/bucklescript/docson/#build-schema.json
+// BuckleScript comes with its own parser for bsconfig.json, which is regular
+// JSON, but with extra support for comments and trailing commas.
+{
+  "name": "learn-reasonml-workshop",
+  "version": "0.2.0",
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": [
+    // Add all bucklescript dependencies here. You'd usually install them
+    // normally through `npm install my-dependency`. And if it is a
+    // Reason/BuckleScript project that needs to be recognized and compiled by
+    // BuckleScript build, then include them here.
+  ],
+  "warnings": {
+    "error": "+101"
+  },
+  "namespace": true,
+  "refmt": 3
+}
