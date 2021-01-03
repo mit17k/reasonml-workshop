@@ -508,12 +508,7 @@ module MyList: {
   let filter: ('a => bool, list('a)) => list('a);
 } = {
   let map = (f, lst) => List.fold_left((res, current) => res @ [f(current)], [], lst);
-  let iter = (f, lst) => List.fold_left((_, current) => {
-    f(current)
-    switch current {
-    | _ => ()
-    };
-  }, (), lst);
+  let iter = (f, lst) => List.fold_left((_, current) => f(current), (), lst);
   let filter = (f, lst) => List.fold_left((res, current) => {
     let result = f(current);
     switch result {

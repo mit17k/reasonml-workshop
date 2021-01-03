@@ -13,7 +13,7 @@ let divide: (int, int) => int;
 let average: (int, int) => int;
 
 // 05-twice
-let add1: int => int;
+let add1: int=> int;
 let square: int => int;
 let twice: ('a => 'a, 'a) => 'a;
 let add2: int => int;
